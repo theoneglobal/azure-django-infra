@@ -1,0 +1,8 @@
+terraform {
+  backend "azurerm" {
+    resource_group_name  = "bt-devops-bootstrap-rg"
+    storage_account_name = "tfbootstrapstore"
+    container_name       = "terraform-state"
+    key                  = "devops.tfstate"
+  }
+}
